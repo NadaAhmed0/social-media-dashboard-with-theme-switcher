@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply bg-[#1e202a] font-inter;
+}
+.bg_back {
+  @apply -z-10 rounded-t-none rounded-tr-none rounded-3xl absolute top-0 w-full left-0 h-[200px];
+}
+/* header */
+.toggle:has(input:checked) span {
+  @apply left-[58%];
+}
+
+/* end header */
+/* social-stats */
+article div {
+  @apply w-[100%] sm:w-[calc(95%/2)] lg:w-[calc(95%/3)] xl:w-[calc(90%/4)] flex items-center flex-col p-2  cursor-pointer  rounded-md   border-t-4 overflow-hidden;
+}
+article div section {
+  @apply flex gap-2  my-4;
+}
+article div h2 {
+  @apply text-5xl font-bold  mt-4;
+}
+article div p {
+  @apply text-[#8b97c6] tracking-[0.3em] mb-4;
+}
+article div span {
+  @apply flex items-center gap-1;
+}
+/* end  social-stats*/
+/* over view */
+.parent-card {
+  @apply flex mb-5  flex-wrap justify-between lg:justify-start xl:justify-between gap-5;
+}
+.rate {
+  @apply flex items-center gap-1 font-semibold;
+}
+.cards {
+  @apply flex flex-col cursor-pointer gap-5 rounded-lg w-[100%] sm:w-[calc(95%/2)] lg:w-[calc(95%/3)] xl:w-[calc(90%/4)]   p-5;
+}
+/* end over view */
+/* black mode */
+.coreB {
+  @apply bg-white transition-all absolute rounded-full w-4 h-4 left-[6%];
+}
+.coreBB {
+  @apply bg-toggle toggle  w-12 rounded-full cursor-pointer flex items-center relative;
+}
+/* end black mode */
+/* white mode */
+.coreW {
+  @apply bg-[#1e202a] transition-all absolute rounded-full w-4 h-4 left-[6%];
+}
+.coreWW {
+  @apply bg-[#aeb3cb] toggle  w-12 rounded-full cursor-pointer flex items-center relative;
+}
+/* end white mode */
